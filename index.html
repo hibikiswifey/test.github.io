@@ -29,9 +29,17 @@
   Your browser does not support the audio element.
 </audio>
 
-
+<script>
+  window.addEventListener('load', () => {
+    const audio = document.querySelector('audio');
+    audio.play().catch(() => {
+      console.log("Autoplay blocked; user interaction required.");
+    });
+  });
+</script>
 
 </body>
+
 
 
 </html>
